@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "age": 28,
+      "address": {
+        "street": "123 Main St",
+        "city": "Boston",
+        "state": "MA",
+        "zip": "02108"
+      },
+      "roles": ["admin", "user"],
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "age": 32,
+      "address": {
+        "street": "456 Park Ave",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10022"
+      },
+      "roles": ["user"],
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "email": "bob@example.com",
+      "age": 45,
+      "address": {
+        "street": "789 Oak Dr",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": "94107"
+      },
+      "roles": ["user"],
+      "active": false
+    }
+  ],
+  "products": [
+    {
+      "id": 101,
+      "name": "Laptop",
+      "price": 999.99,
+      "category": "Electronics",
+      "stock": 15,
+      "features": ["8GB RAM", "256GB SSD", "15.6 inch display"]
+    },
+    {
+      "id": 102,
+      "name": "Smartphone",
+      "price": 699.99,
+      "category": "Electronics",
+      "stock": 25,
+      "features": ["6GB RAM", "128GB Storage", "5G"]
+    },
+    {
+      "id": 103,
+      "name": "Coffee Maker",
+      "price": 49.99,
+      "category": "Kitchen",
+      "stock": 10,
+      "features": ["Programmable", "Auto-shutoff", "12 cup capacity"]
+    }
+  ],
+  "settings": {
+    "theme": "dark",
+    "notifications": true,
+    "language": "en-US",
+    "currency": "USD"
+  }
+}

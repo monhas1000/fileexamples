@@ -1,0 +1,36 @@
+Sample Text File
+
+This is a simple text file that contains plain text content.
+It can be used for testing purposes or as a template for creating other text files.
+
+FEATURES OF TEXT FILES:
+- Simple and lightweight
+- Human-readable format
+- Can be opened with any text editor
+- Universal compatibility across operating systems
+- No formatting or special characters
+
+COMMON USES:
+1. Configuration files
+2. Log files
+3. Data storage
+4. Documentation
+5. Simple note-taking
+
+EXAMPLE DATA:
+
+Name        | Age | Occupation
+------------|-----|------------
+John Smith  | 34  | Developer
+Jane Doe    | 28  | Designer
+Bob Johnson | 45  | Manager
+
+SAMPLE CODE SNIPPET:
+
+function helloWorld() {
+  console.log("Hello, World!");
+}
+
+helloWorld();
+
+END OF SAMPLE TEXT FILE

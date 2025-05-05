@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample HTML Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+        }
+        @media (max-width: 600px) {
+            .card {
+                width: 100%;
+            }
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sample HTML Document</h1>
+        <p>This is a sample HTML file that demonstrates common HTML elements and structure.</p>
+    </header>
+    
+    <main>
+        <section>
+            <h2>HTML Features</h2>
+            <p>HTML (HyperText Markup Language) is the standard markup language for documents designed to be displayed in a web browser.</p>
+            
+            <div class="container">
+                <div class="card">
+                    <h3>Semantic Elements</h3>
+                    <p>HTML5 introduced many semantic elements like <code>header</code>, <code>footer</code>, <code>section</code>, and <code>article</code>.</p>
+                </div>
+                <div class="card">
+                    <h3>Forms</h3>
+                    <p>HTML forms are used to collect user input and submit data to servers.</p>
+                </div>
+                <div class="card">
+                    <h3>Tables</h3>
+                    <p>HTML tables allow web developers to arrange data into rows and columns.</p>
+                </div>
+                <div class="card">
+                    <h3>Media</h3>
+                    <p>HTML supports various media types including images, audio, and video.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Sample Form</h2>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Sample HTML Document. All rights reserved.</p>
+    </footer>
+</body>
+</html>

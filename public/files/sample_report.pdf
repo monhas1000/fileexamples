@@ -1,0 +1,95 @@
+%PDF-1.4
+%����
+1 0 obj
+<</Title (Sample Business Report)
+/Producer (Sample PDF Generator)
+/CreationDate (D:20230401000000)
+/ModDate (D:20230401000000)>>
+endobj
+2 0 obj
+<</Type /Catalog
+/Pages 3 0 R>>
+endobj
+3 0 obj
+<</Type /Pages
+/Count 1
+/Kids [4 0 R]>>
+endobj
+4 0 obj
+<</Type /Page
+/Parent 3 0 R
+/Resources <</Font <</F1 5 0 R>>>>
+/MediaBox [0 0 612 792]
+/Contents 6 0 R>>
+endobj
+5 0 obj
+<</Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica>>
+endobj
+6 0 obj
+<</Length 676>>
+stream
+BT
+/F1 24 Tf
+72 720 Td
+(Sample Business Report) Tj
+ET
+BT
+/F1 12 Tf
+72 680 Td
+(Executive Summary) Tj
+ET
+BT
+/F1 10 Tf
+72 660 Td
+(This is a sample business report created for testing purposes. It contains text that) Tj
+72 645 Td
+(simulates a real business report but does not contain actual business information.) Tj
+ET
+BT
+/F1 12 Tf
+72 610 Td
+(Financial Overview) Tj
+ET
+BT
+/F1 10 Tf
+72 590 Td
+(Revenue: $1,250,000) Tj
+72 575 Td
+(Expenses: $875,000) Tj
+72 560 Td
+(Profit: $375,000) Tj
+ET
+BT
+/F1 12 Tf
+72 525 Td
+(Recommendations) Tj
+ET
+BT
+/F1 10 Tf
+72 505 Td
+(1. Increase marketing budget by 15%) Tj
+72 490 Td
+(2. Expand into new markets) Tj
+72 475 Td
+(3. Invest in employee training) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000135 00000 n 
+0000000182 00000 n 
+0000000239 00000 n 
+0000000355 00000 n 
+0000000421 00000 n 
+trailer
+<</Size 7
+/Root 2 0 R
+/Info 1 0 R>>
+startxref
+1147
+%%EOF
