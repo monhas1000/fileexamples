@@ -56,6 +56,7 @@ export function middleware(request: NextRequest) {
   return NextResponse.next()
 }
 
+// Update the matcher to exclude the catch-all route from middleware processing
 export const config = {
-  matcher: "/files/:path*",
+  matcher: ["/files/:path*"],
 }

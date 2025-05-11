@@ -78,13 +78,62 @@ const badgeColorMap = {
   vm: "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
 }
 
+// Gradient backgrounds for cards based on category
+const gradientMap = {
+  video: "bg-gradient-to-br from-white to-rose-50 dark:from-slate-900 dark:to-rose-950/40",
+  audio: "bg-gradient-to-br from-white to-amber-50 dark:from-slate-900 dark:to-amber-950/40",
+  document: "bg-gradient-to-br from-white to-blue-50 dark:from-slate-900 dark:to-blue-950/40",
+  image: "bg-gradient-to-br from-white to-purple-50 dark:from-slate-900 dark:to-purple-950/40",
+  font: "bg-gradient-to-br from-white to-emerald-50 dark:from-slate-900 dark:to-emerald-950/40",
+  ebook: "bg-gradient-to-br from-white to-cyan-50 dark:from-slate-900 dark:to-cyan-950/40",
+  code: "bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-800/40",
+  archive: "bg-gradient-to-br from-white to-green-50 dark:from-slate-900 dark:to-green-950/40",
+  executable: "bg-gradient-to-br from-white to-red-50 dark:from-slate-900 dark:to-red-950/40",
+  spreadsheet: "bg-gradient-to-br from-white to-blue-50 dark:from-slate-900 dark:to-blue-950/40",
+  presentation: "bg-gradient-to-br from-white to-orange-50 dark:from-slate-900 dark:to-orange-950/40",
+  database: "bg-gradient-to-br from-white to-indigo-50 dark:from-slate-900 dark:to-indigo-950/40",
+  config: "bg-gradient-to-br from-white to-gray-50 dark:from-slate-900 dark:to-gray-800/40",
+  disk: "bg-gradient-to-br from-white to-teal-50 dark:from-slate-900 dark:to-teal-950/40",
+  vm: "bg-gradient-to-br from-white to-violet-50 dark:from-slate-900 dark:to-violet-950/40",
+}
+
+// Border gradients for cards
+const borderGradientMap = {
+  video: "border-t-rose-100 border-l-rose-100 dark:border-t-rose-900/40 dark:border-l-rose-900/40",
+  audio: "border-t-amber-100 border-l-amber-100 dark:border-t-amber-900/40 dark:border-l-amber-900/40",
+  document: "border-t-blue-100 border-l-blue-100 dark:border-t-blue-900/40 dark:border-l-blue-900/40",
+  image: "border-t-purple-100 border-l-purple-100 dark:border-t-purple-900/40 dark:border-l-purple-900/40",
+  font: "border-t-emerald-100 border-l-emerald-100 dark:border-t-emerald-900/40 dark:border-l-emerald-900/40",
+  ebook: "border-t-cyan-100 border-l-cyan-100 dark:border-t-cyan-900/40 dark:border-l-cyan-900/40",
+  code: "border-t-slate-100 border-l-slate-100 dark:border-t-slate-700/40 dark:border-l-slate-700/40",
+  archive: "border-t-green-100 border-l-green-100 dark:border-t-green-900/40 dark:border-l-green-900/40",
+  executable: "border-t-red-100 border-l-red-100 dark:border-t-red-900/40 dark:border-l-red-900/40",
+  spreadsheet: "border-t-blue-100 border-l-blue-100 dark:border-t-blue-900/40 dark:border-l-blue-900/40",
+  presentation: "border-t-orange-100 border-l-orange-100 dark:border-t-orange-900/40 dark:border-l-orange-900/40",
+  database: "border-t-indigo-100 border-l-indigo-100 dark:border-t-indigo-900/40 dark:border-l-indigo-900/40",
+  config: "border-t-gray-100 border-l-gray-100 dark:border-t-gray-700/40 dark:border-l-gray-700/40",
+  disk: "border-t-teal-100 border-l-teal-100 dark:border-t-teal-900/40 dark:border-l-teal-900/40",
+  vm: "border-t-violet-100 border-l-violet-100 dark:border-t-violet-900/40 dark:border-l-violet-900/40",
+}
+
 export function FileCard({ file }: { file: FileType }) {
   const Icon = iconMap[file.category as keyof typeof iconMap] || FileText
   const colorClass = colorMap[file.category as keyof typeof colorMap] || colorMap.document
   const badgeColorClass = badgeColorMap[file.category as keyof typeof badgeColorMap] || badgeColorMap.document
+  const gradientClass = gradientMap[file.category as keyof typeof gradientMap] || gradientMap.document
+  const borderGradientClass =
+    borderGradientMap[file.category as keyof typeof borderGradientMap] || borderGradientMap.document
 
   return (
-    <Card className="overflow-hidden border-0 bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-shadow">
+    <Card
+      className={cn(
+        "overflow-hidden border-0 shadow-md hover:shadow-lg transition-all duration-300",
+        gradientClass,
+        "border-t border-l",
+        borderGradientClass,
+        "rounded-xl backdrop-blur-sm",
+      )}
+    >
       <Link href={`/category/${file.category}/${file.id}`} className="block">
         <CardHeader className="pb-2 pt-6">
           <div className="flex justify-between items-start">
@@ -107,10 +156,15 @@ export function FileCard({ file }: { file: FileType }) {
         <p className="mt-2 text-sm text-slate-600 dark:text-slate-300 line-clamp-2">{file.description}</p>
       </CardContent>
       <CardFooter className="pt-0 pb-6 flex justify-between">
-        <Button variant="outline" size="sm" asChild>
+        <Button
+          variant="outline"
+          size="sm"
+          asChild
+          className="border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800"
+        >
           <Link href={`/category/${file.category}/${file.id}`}>Details</Link>
         </Button>
-        <Button size="sm" className="bg-emerald-600 hover:bg-emerald-700" asChild>
+        <Button size="sm" className="bg-emerald-600 hover:bg-emerald-700 transition-colors" asChild>
           <a href={file.downloadUrl} download>
             <Download className="mr-2 h-4 w-4" />
             Download
