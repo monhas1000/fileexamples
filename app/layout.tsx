@@ -25,11 +25,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Basic favicon - will work in most browsers */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+
+        {/* SVG favicon for modern browsers */}
+        <link rel="icon" href="/favicon.png" type="image/png" />
+
+        {/* Apple Touch Icon */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        {/* Web App Manifest */}
+        <link rel="manifest" href="/manifest.json" />
+
         {/* Google Analytics Script */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-5Y3DP7FXVV"
-        />
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-5Y3DP7FXVV" />
         <Script
           id="google-analytics"
           strategy="afterInteractive"
@@ -44,7 +53,7 @@ export default function RootLayout({
         />
       </head>
       <body className={outfit.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {/* Dynamic network background */}
           <BackgroundNetwork />
 
