@@ -1,7 +1,5 @@
 import CategoryGrid from "@/components/category-grid"
 import FeatureSection from "@/components/feature-section"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
 import { PopularFiles } from "@/components/popular-files"
 import { SearchBar } from "@/components/search-bar"
 
@@ -28,9 +26,7 @@ export default function Home() {
       <div className="space-y-6">
         <div className="flex justify-between items-center">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-50">Browse by Category</h2>
-          <Button variant="ghost" asChild>
-            <Link href="/categories">View All</Link>
-          </Button>
+          {/* Remove the View All button */}
         </div>
         <CategoryGrid />
       </div>

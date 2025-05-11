@@ -53,7 +53,7 @@ export default function RootLayout({
         />
       </head>
       <body className={outfit.className}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {/* Dynamic network background */}
           <BackgroundNetwork />
 

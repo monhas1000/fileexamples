@@ -19,6 +19,9 @@ import {
   Server,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { getFilesByCategory } from "@/lib/files"
+import { Button } from "@/components/ui/button"
+import { Download } from "lucide-react"
 
 const iconMap: Record<string, React.ComponentType<any>> = {
   video: FileVideo,
@@ -134,13 +137,27 @@ export default function CategoriesPage() {
   return (
     <div className="space-y-8">
       <div className="bg-gradient-to-r from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 p-8 rounded-2xl">
-        <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-50">All Categories</h1>
-        <p className="text-slate-600 dark:text-slate-300 mt-2">Browse all file categories available on FileVault</p>
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-50">All Categories</h1>
+            <p className="text-slate-600 dark:text-slate-300 mt-2">
+              Browse all file categories available on File Examples
+            </p>
+          </div>
+
+          <Button asChild className="bg-emerald-600 hover:bg-emerald-700 self-start">
+            <a href="/api/download-all?category=all" download>
+              <Download className="mr-2 h-5 w-5" />
+              Download All Files
+            </a>
+          </Button>
+        </div>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {categories.map((category) => {
           const Icon = iconMap[category.id] || FileText
+          const fileCount = getFilesByCategory(category.id).length
 
           return (
             <Link
@@ -170,6 +187,9 @@ export default function CategoriesPage() {
                 )}
               >
                 {category.name}
+              </span>
+              <span className="text-xs text-slate-500 dark:text-slate-500 mt-1">
+                {fileCount} {fileCount === 1 ? "file" : "files"}
               </span>
             </Link>
           )

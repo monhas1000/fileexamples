@@ -3,7 +3,6 @@ import { FileCard } from "@/components/file-card"
 import { getFilesByCategory } from "@/lib/files"
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
-import Link from "next/link"
 
 export const dynamicParams = true
 
@@ -59,10 +58,10 @@ export default function CategoryPage({ params }: { params: { type: string } }) {
           </div>
 
           <Button asChild className="bg-emerald-600 hover:bg-emerald-700 self-start">
-            <Link href={`/api/download-all?category=${type}`}>
+            <a href={`/api/download-all?category=${type}`} download>
               <Download className="mr-2 h-5 w-5" />
               Download All as ZIP
-            </Link>
+            </a>
           </Button>
         </div>
       </div>
