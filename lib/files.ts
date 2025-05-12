@@ -443,18 +443,6 @@ const files: FileType[] = [
 
   // Vector Graphics files
   {
-    id: "vector-svg-1",
-    name: "Infographic Elements",
-    extension: "svg",
-    category: "vector",
-    size: "15 KB",
-    exactSize: 15360,
-    description: "A sample SVG vector graphics file with infographic elements, ideal for responsive web graphics.",
-    url: "/files/sample_infographic_elements.svg",
-    downloadUrl: "/api/download?file=sample_infographic_elements.svg&type=image/svg+xml",
-    contentType: "image/svg+xml",
-  },
-  {
     id: "vector-ai-1",
     name: "Corporate Identity",
     extension: "ai",
