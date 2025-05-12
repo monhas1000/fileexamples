@@ -34,6 +34,17 @@ const mimeTypes: Record<string, string> = {
   img: "application/octet-stream",
   vdi: "application/x-virtualbox-vdi",
   ova: "application/ovf",
+  // New file types
+  obj: "application/x-tgif",
+  stl: "application/vnd.ms-pki.stl",
+  svg: "image/svg+xml",
+  ai: "application/postscript",
+  srt: "application/x-subrip",
+  vtt: "text/vtt",
+  dwg: "application/acad",
+  dxf: "application/dxf",
+  psd: "image/vnd.adobe.photoshop",
+  sketch: "application/octet-stream",
 }
 
 export function middleware(request: NextRequest) {

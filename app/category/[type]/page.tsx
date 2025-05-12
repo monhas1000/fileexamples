@@ -15,13 +15,26 @@ export async function generateStaticParams() {
     { type: "font" },
     { type: "ebook" },
     { type: "code" },
+    { type: "archive" },
+    { type: "executable" },
+    { type: "spreadsheet" },
+    { type: "presentation" },
+    { type: "database" },
+    { type: "config" },
+    { type: "disk" },
+    { type: "vm" },
+    { type: "3d" },
+    { type: "vector" },
+    { type: "subtitle" },
+    { type: "cad" },
+    { type: "design" },
   ]
 }
 
 export default function CategoryPage({ params }: { params: { type: string } }) {
   const { type } = params
 
-  // Validate category type
+  // Validate category type - UPDATED to include new file types
   const validTypes = [
     "video",
     "audio",
@@ -38,6 +51,11 @@ export default function CategoryPage({ params }: { params: { type: string } }) {
     "config",
     "disk",
     "vm",
+    "3d",
+    "vector",
+    "subtitle",
+    "cad",
+    "design",
   ]
 
   if (!validTypes.includes(type)) {

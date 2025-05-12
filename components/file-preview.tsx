@@ -22,6 +22,11 @@ import {
   Download,
   Calendar,
   FileTypeIcon,
+  CuboidIcon as Cube,
+  PenTool,
+  Subtitles,
+  Ruler,
+  Palette,
 } from "lucide-react"
 import { formatFileSize } from "@/lib/files"
 import { cn } from "@/lib/utils"
@@ -44,6 +49,11 @@ const gradientMap = {
   config: "bg-gradient-to-br from-white to-gray-50 dark:from-slate-900 dark:to-gray-800/40",
   disk: "bg-gradient-to-br from-white to-teal-50 dark:from-slate-900 dark:to-teal-950/40",
   vm: "bg-gradient-to-br from-white to-violet-50 dark:from-slate-900 dark:to-violet-950/40",
+  "3d": "bg-gradient-to-br from-white to-pink-50 dark:from-slate-900 dark:to-pink-950/40",
+  vector: "bg-gradient-to-br from-white to-yellow-50 dark:from-slate-900 dark:to-yellow-950/40",
+  subtitle: "bg-gradient-to-br from-white to-blue-50 dark:from-slate-900 dark:to-blue-950/40",
+  cad: "bg-gradient-to-br from-white to-gray-50 dark:from-slate-900 dark:to-gray-900/40",
+  design: "bg-gradient-to-br from-white to-pink-50 dark:from-slate-900 dark:to-pink-950/40",
 }
 
 // Border gradients for cards
@@ -63,6 +73,11 @@ const borderGradientMap = {
   config: "border-t-gray-100 border-l-gray-100 dark:border-t-gray-700/40 dark:border-l-gray-700/40",
   disk: "border-t-teal-100 border-l-teal-100 dark:border-t-teal-900/40 dark:border-l-teal-900/40",
   vm: "border-t-violet-100 border-l-violet-100 dark:border-t-violet-900/40 dark:border-l-violet-900/40",
+  "3d": "border-t-pink-100 border-l-pink-100 dark:border-t-pink-900/40 dark:border-l-pink-900/40",
+  vector: "border-t-yellow-100 border-l-yellow-100 dark:border-t-yellow-900/40 dark:border-l-yellow-900/40",
+  subtitle: "border-t-blue-100 border-l-blue-100 dark:border-t-blue-900/40 dark:border-l-blue-900/40",
+  cad: "border-t-gray-100 border-l-gray-100 dark:border-t-gray-700/40 dark:border-l-gray-700/40",
+  design: "border-t-pink-100 border-l-pink-100 dark:border-t-pink-900/40 dark:border-l-pink-900/40",
 }
 
 // Icon background colors
@@ -82,6 +97,11 @@ const iconBgColorMap = {
   config: "bg-gray-500 dark:bg-gray-600",
   disk: "bg-teal-500 dark:bg-teal-600",
   vm: "bg-violet-500 dark:bg-violet-600",
+  "3d": "bg-pink-500 dark:bg-pink-600",
+  vector: "bg-yellow-500 dark:bg-yellow-600",
+  subtitle: "bg-blue-500 dark:bg-blue-600",
+  cad: "bg-gray-500 dark:bg-gray-600",
+  design: "bg-pink-500 dark:bg-pink-600",
 }
 
 // Text colors for headings
@@ -101,6 +121,11 @@ const textColorMap = {
   config: "text-gray-600 dark:text-gray-400",
   disk: "text-teal-600 dark:text-teal-400",
   vm: "text-violet-600 dark:text-violet-400",
+  "3d": "text-pink-600 dark:text-pink-400",
+  vector: "text-yellow-600 dark:text-yellow-400",
+  subtitle: "text-blue-600 dark:text-blue-400",
+  cad: "text-gray-600 dark:text-gray-400",
+  design: "text-pink-600 dark:text-pink-400",
 }
 
 export function FilePreview({ file }: { file: FileType }) {
@@ -136,6 +161,16 @@ export function FilePreview({ file }: { file: FileType }) {
         return <Type className="h-6 w-6 text-white" />
       case "ebook":
         return <BookOpen className="h-6 w-6 text-white" />
+      case "3d":
+        return <Cube className="h-6 w-6 text-white" />
+      case "vector":
+        return <PenTool className="h-6 w-6 text-white" />
+      case "subtitle":
+        return <Subtitles className="h-6 w-6 text-white" />
+      case "cad":
+        return <Ruler className="h-6 w-6 text-white" />
+      case "design":
+        return <Palette className="h-6 w-6 text-white" />
       default:
         return <FileIcon className="h-6 w-6 text-white" />
     }

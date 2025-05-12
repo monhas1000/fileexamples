@@ -15,6 +15,11 @@ import {
   Settings,
   HardDrive,
   Server,
+  CuboidIcon as Cube,
+  PenTool,
+  Subtitles,
+  Ruler,
+  Palette,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
@@ -40,6 +45,11 @@ const iconMap = {
   config: Settings,
   disk: HardDrive,
   vm: Server,
+  "3d": Cube,
+  vector: PenTool,
+  subtitle: Subtitles,
+  cad: Ruler,
+  design: Palette,
 }
 
 const colorMap = {
@@ -58,6 +68,11 @@ const colorMap = {
   config: "text-gray-500 bg-gray-100 dark:bg-gray-800 dark:text-gray-400",
   disk: "text-teal-500 bg-teal-100 dark:bg-teal-950 dark:text-teal-400",
   vm: "text-violet-500 bg-violet-100 dark:bg-violet-950 dark:text-violet-400",
+  "3d": "text-pink-500 bg-pink-100 dark:bg-pink-950 dark:text-pink-400",
+  vector: "text-yellow-500 bg-yellow-100 dark:bg-yellow-950 dark:text-yellow-400",
+  subtitle: "text-blue-500 bg-blue-100 dark:bg-blue-950 dark:text-blue-400",
+  cad: "text-gray-500 bg-gray-100 dark:bg-gray-800 dark:text-gray-400",
+  design: "text-pink-500 bg-pink-100 dark:bg-pink-950 dark:text-pink-400",
 }
 
 const badgeColorMap = {
@@ -76,6 +91,11 @@ const badgeColorMap = {
   config: "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300",
   disk: "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-300",
   vm: "bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300",
+  "3d": "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300",
+  vector: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300",
+  subtitle: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+  cad: "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
+  design: "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300",
 }
 
 // Gradient backgrounds for cards based on category
@@ -95,6 +115,11 @@ const gradientMap = {
   config: "bg-gradient-to-br from-white to-gray-50 dark:from-slate-900 dark:to-gray-800/40",
   disk: "bg-gradient-to-br from-white to-teal-50 dark:from-slate-900 dark:to-teal-950/40",
   vm: "bg-gradient-to-br from-white to-violet-50 dark:from-slate-900 dark:to-violet-950/40",
+  "3d": "bg-gradient-to-br from-white to-pink-50 dark:from-slate-900 dark:to-pink-950/40",
+  vector: "bg-gradient-to-br from-white to-yellow-50 dark:from-slate-900 dark:to-yellow-950/40",
+  subtitle: "bg-gradient-to-br from-white to-blue-50 dark:from-slate-900 dark:to-blue-950/40",
+  cad: "bg-gradient-to-br from-white to-gray-50 dark:from-slate-900 dark:to-gray-900/40",
+  design: "bg-gradient-to-br from-white to-pink-50 dark:from-slate-900 dark:to-pink-950/40",
 }
 
 // Border gradients for cards
@@ -114,6 +139,11 @@ const borderGradientMap = {
   config: "border-t-gray-100 border-l-gray-100 dark:border-t-gray-700/40 dark:border-l-gray-700/40",
   disk: "border-t-teal-100 border-l-teal-100 dark:border-t-teal-900/40 dark:border-l-teal-900/40",
   vm: "border-t-violet-100 border-l-violet-100 dark:border-t-violet-900/40 dark:border-l-violet-900/40",
+  "3d": "border-t-pink-100 border-l-pink-100 dark:border-t-pink-900/40 dark:border-l-pink-900/40",
+  vector: "border-t-yellow-100 border-l-yellow-100 dark:border-t-yellow-900/40 dark:border-l-yellow-900/40",
+  subtitle: "border-t-blue-100 border-l-blue-100 dark:border-t-blue-900/40 dark:border-l-blue-900/40",
+  cad: "border-t-gray-100 border-l-gray-100 dark:border-t-gray-700/40 dark:border-l-gray-700/40",
+  design: "border-t-pink-100 border-l-pink-100 dark:border-t-pink-900/40 dark:border-l-pink-900/40",
 }
 
 export function FileCard({ file }: { file: FileType }) {

@@ -117,6 +117,16 @@ function getAcceptTypes(category: string): string {
       return ".epub,.mobi,.azw"
     case "code":
       return ".html,.css,.js,.json,.xml,.md,.py,.java,.cpp"
+    case "3d":
+      return ".obj,.stl,.fbx,.gltf,.glb"
+    case "vector":
+      return ".svg,.ai,.eps,.pdf"
+    case "subtitle":
+      return ".srt,.vtt,.sub,.sbv"
+    case "cad":
+      return ".dwg,.dxf,.step,.stp"
+    case "design":
+      return ".psd,.sketch,.xd,.fig"
     default:
       return "*"
   }

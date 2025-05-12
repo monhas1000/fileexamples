@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ModeToggle } from "./mode-toggle"
-import { Archive, Menu, X, ChevronDown, FileText, FileVideo, Code } from "lucide-react"
+import { Archive, Menu, X, ChevronDown, FileText, FileVideo, Code, Palette } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
@@ -20,7 +20,12 @@ const categoryGroups = [
   {
     name: "Media",
     icon: FileVideo,
-    categories: ["image", "audio", "video", "font"],
+    categories: ["image", "audio", "video", "font", "subtitle"],
+  },
+  {
+    name: "Design",
+    icon: Palette,
+    categories: ["vector", "design", "3d", "cad"],
   },
   {
     name: "Development",

@@ -412,6 +412,138 @@ const files: FileType[] = [
     downloadUrl: "/api/download?file=sample_exported_vm.ova&type=application/ovf",
     contentType: "application/ovf",
   },
+
+  // NEW FILE TYPES
+
+  // 3D Model files
+  {
+    id: "3d-obj-1",
+    name: "Geometric Sculpture",
+    extension: "obj",
+    category: "3d",
+    size: "256 KB",
+    exactSize: 262144,
+    description: "A sample OBJ 3D model file of a geometric sculpture, commonly used in 3D modeling and printing.",
+    url: "/files/sample_geometric_sculpture.obj",
+    downloadUrl: "/api/download?file=sample_geometric_sculpture.obj&type=application/x-tgif",
+    contentType: "application/x-tgif",
+  },
+  {
+    id: "3d-stl-1",
+    name: "Mechanical Part",
+    extension: "stl",
+    category: "3d",
+    size: "350 KB",
+    exactSize: 358400,
+    description: "A sample STL 3D model file of a mechanical part, widely used for 3D printing and CAD applications.",
+    url: "/files/sample_mechanical_part.stl",
+    downloadUrl: "/api/download?file=sample_mechanical_part.stl&type=application/vnd.ms-pki.stl",
+    contentType: "application/vnd.ms-pki.stl",
+  },
+
+  // Vector Graphics files
+  {
+    id: "vector-svg-1",
+    name: "Infographic Elements",
+    extension: "svg",
+    category: "vector",
+    size: "15 KB",
+    exactSize: 15360,
+    description: "A sample SVG vector graphics file with infographic elements, ideal for responsive web graphics.",
+    url: "/files/sample_infographic_elements.svg",
+    downloadUrl: "/api/download?file=sample_infographic_elements.svg&type=image/svg+xml",
+    contentType: "image/svg+xml",
+  },
+  {
+    id: "vector-ai-1",
+    name: "Corporate Identity",
+    extension: "ai",
+    category: "vector",
+    size: "1.2 MB",
+    exactSize: 1258291,
+    description: "A sample Adobe Illustrator file with corporate identity elements like logos and business cards.",
+    url: "/files/sample_corporate_identity.ai",
+    downloadUrl: "/api/download?file=sample_corporate_identity.ai&type=application/postscript",
+    contentType: "application/postscript",
+  },
+
+  // Subtitle files
+  {
+    id: "subtitle-srt-1",
+    name: "Movie Subtitles",
+    extension: "srt",
+    category: "subtitle",
+    size: "12 KB",
+    exactSize: 12288,
+    description: "A sample SRT subtitle file for a movie, containing time-coded text for video subtitling.",
+    url: "/files/sample_movie_subtitles.srt",
+    downloadUrl: "/api/download?file=sample_movie_subtitles.srt&type=application/x-subrip",
+    contentType: "application/x-subrip",
+  },
+  {
+    id: "subtitle-vtt-1",
+    name: "Web Video Captions",
+    extension: "vtt",
+    category: "subtitle",
+    size: "8 KB",
+    exactSize: 8192,
+    description: "A sample WebVTT subtitle file for web videos, used for HTML5 video captioning and subtitles.",
+    url: "/files/sample_web_video_captions.vtt",
+    downloadUrl: "/api/download?file=sample_web_video_captions.vtt&type=text/vtt",
+    contentType: "text/vtt",
+  },
+
+  // CAD files
+  {
+    id: "cad-dwg-1",
+    name: "Architectural Blueprint",
+    extension: "dwg",
+    category: "cad",
+    size: "1.8 MB",
+    exactSize: 1887436,
+    description: "A sample DWG CAD file with architectural blueprints, used in AutoCAD and other CAD software.",
+    url: "/files/sample_architectural_blueprint.dwg",
+    downloadUrl: "/api/download?file=sample_architectural_blueprint.dwg&type=application/acad",
+    contentType: "application/acad",
+  },
+  {
+    id: "cad-dxf-1",
+    name: "Engineering Schematic",
+    extension: "dxf",
+    category: "cad",
+    size: "950 KB",
+    exactSize: 972800,
+    description: "A sample DXF CAD file with engineering schematics, widely supported across CAD applications.",
+    url: "/files/sample_engineering_schematic.dxf",
+    downloadUrl: "/api/download?file=sample_engineering_schematic.dxf&type=application/dxf",
+    contentType: "application/dxf",
+  },
+
+  // Photoshop files
+  {
+    id: "design-psd-1",
+    name: "Website Mockup",
+    extension: "psd",
+    category: "design",
+    size: "4.5 MB",
+    exactSize: 4718592,
+    description: "A sample PSD file with a website mockup design, including layers and smart objects.",
+    url: "/files/sample_website_mockup.psd",
+    downloadUrl: "/api/download?file=sample_website_mockup.psd&type=image/vnd.adobe.photoshop",
+    contentType: "image/vnd.adobe.photoshop",
+  },
+  {
+    id: "design-sketch-1",
+    name: "Mobile App UI Kit",
+    extension: "sketch",
+    category: "design",
+    size: "3.2 MB",
+    exactSize: 3355443,
+    description: "A sample Sketch file with a mobile app UI kit, including components and symbols for app design.",
+    url: "/files/sample_mobile_app_ui_kit.sketch",
+    downloadUrl: "/api/download?file=sample_mobile_app_ui_kit.sketch&type=application/octet-stream",
+    contentType: "application/octet-stream",
+  },
 ]
 
 export function getFilesByCategory(category: string): FileType[] {
@@ -453,6 +585,11 @@ export function getAllCategories() {
     { id: "config", name: "Configuration" },
     { id: "disk", name: "Disk Image" },
     { id: "vm", name: "Virtual Machine" },
+    { id: "3d", name: "3D Models" },
+    { id: "vector", name: "Vector Graphics" },
+    { id: "subtitle", name: "Subtitles" },
+    { id: "cad", name: "CAD Files" },
+    { id: "design", name: "Design Files" },
   ]
 }
 

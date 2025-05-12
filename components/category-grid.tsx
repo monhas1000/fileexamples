@@ -18,6 +18,11 @@ import {
   Settings,
   HardDrive,
   Server,
+  CuboidIcon as Cube,
+  PenTool,
+  Subtitles,
+  Ruler,
+  Palette,
 } from "lucide-react"
 
 const iconMap: Record<string, React.ComponentType<any>> = {
@@ -36,6 +41,11 @@ const iconMap: Record<string, React.ComponentType<any>> = {
   config: Settings,
   disk: HardDrive,
   vm: Server,
+  "3d": Cube,
+  vector: PenTool,
+  subtitle: Subtitles,
+  cad: Ruler,
+  design: Palette,
 }
 
 const colorMap: Record<string, string> = {
@@ -54,6 +64,11 @@ const colorMap: Record<string, string> = {
   config: "from-gray-500 to-gray-600",
   disk: "from-teal-500 to-green-600",
   vm: "from-purple-400 to-indigo-600",
+  "3d": "from-pink-500 to-purple-600",
+  vector: "from-yellow-500 to-amber-600",
+  subtitle: "from-blue-300 to-cyan-600",
+  cad: "from-gray-500 to-blue-600",
+  design: "from-pink-400 to-rose-600",
 }
 
 const bgLightMap: Record<string, string> = {
@@ -72,6 +87,11 @@ const bgLightMap: Record<string, string> = {
   config: "bg-gray-50",
   disk: "bg-teal-50",
   vm: "bg-purple-50",
+  "3d": "bg-pink-50",
+  vector: "bg-yellow-50",
+  subtitle: "bg-blue-50",
+  cad: "bg-gray-50",
+  design: "bg-pink-50",
 }
 
 const bgDarkMap: Record<string, string> = {
@@ -90,6 +110,11 @@ const bgDarkMap: Record<string, string> = {
   config: "dark:bg-gray-900",
   disk: "dark:bg-teal-950",
   vm: "dark:bg-purple-950",
+  "3d": "dark:bg-pink-950",
+  vector: "dark:bg-yellow-950",
+  subtitle: "dark:bg-blue-950",
+  cad: "dark:bg-gray-900",
+  design: "dark:bg-pink-950",
 }
 
 const textLightMap: Record<string, string> = {
@@ -108,6 +133,11 @@ const textLightMap: Record<string, string> = {
   config: "text-gray-600",
   disk: "text-teal-600",
   vm: "text-purple-600",
+  "3d": "text-pink-600",
+  vector: "text-yellow-600",
+  subtitle: "text-blue-600",
+  cad: "text-gray-600",
+  design: "text-pink-600",
 }
 
 const textDarkMap: Record<string, string> = {
@@ -126,6 +156,11 @@ const textDarkMap: Record<string, string> = {
   config: "dark:text-gray-400",
   disk: "dark:text-teal-400",
   vm: "dark:text-purple-400",
+  "3d": "dark:text-pink-400",
+  vector: "dark:text-yellow-400",
+  subtitle: "dark:text-blue-400",
+  cad: "dark:text-gray-400",
+  design: "dark:text-pink-400",
 }
 
 export default function CategoryGrid() {
